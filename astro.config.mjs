@@ -2,14 +2,18 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-  // URL de produção (Crucial para o Sitemap e para a IA achar seu site)
   site: 'https://ajuda.velodelivery.com.br',
 
   integrations:[
     starlight({
-      title: 'Velo Delivery', // <-- Isso muda o nome lá no topo!
+      title: 'Velo Delivery',
       
-      // Força o idioma para Português (Essencial para a IA e SEO)
+      // 1. CONFIGURAÇÃO DA LOGO
+      logo: {
+        src: './src/assets/logo.png', // <-- Puxa a logo que você acabou de colocar lá
+        replacesTitle: true, // <-- Esconde o texto e deixa só a imagem da logo!
+      },
+      
       defaultLocale: 'pt-BR',
       locales: {
         root: {
@@ -18,19 +22,17 @@ export default defineConfig({
         },
       },
 
-      // Menu lateral dinâmico: ele vai ler suas pastas e criar os links sozinho
+      // 2. ATUALIZAÇÃO DO MENU LATERAL (Lendo suas novas pastas)
       sidebar:[
-        {
-          label: 'Introdução',
-          autogenerate: { directory: '1-introducao' },
-        },
-        {
-          label: 'Gestão de Loja',
-          autogenerate: { directory: '2-gestao-de-loja' },
-        }
+        { label: 'Introdução', autogenerate: { directory: '1-introducao' } },
+        { label: 'Gestão de Loja', autogenerate: { directory: '2-gestao-de-loja' } },
+        { label: 'Catálogo e Estoque', autogenerate: { directory: '3-catalogo-e-estoque' } },
+        { label: 'Pedidos e PDV', autogenerate: { directory: '4-pedidos-e-pdv' } },
+        { label: 'Marketing e Clientes', autogenerate: { directory: '5-marketing-e-clientes' } },
       ],
+      
       customCss:[
-        './src/styles/custom.css', // <-- Adicione esta linha
+        './src/styles/custom.css', // Mantém as cores da Velo que configuramos
       ],
     }),
   ],

@@ -12,25 +12,33 @@ hero:
       icon: right-arrow
       variant: primary
     - text: Acessar o Painel Velo
-      link: https://app.velodelivery.com.br/login # <-- Link corrigido aqui!
+      link: https://app.velodelivery.com.br/login
       icon: external
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
-## Guias Rápidos
+## Escolha um tópico para começar
 
 <CardGrid stagger>
-	<Card title="Gestão de Loja" icon="setting">
-		Aprenda a configurar horários, áreas de entrega, taxas e cardápio.
-	</Card>
-	<Card title="Lançamento de Pedidos" icon="add-document">
-		Como lançar pedidos manuais (telefone/WhatsApp) e gerenciar o status no PDV.
-	</Card>
-	<Card title="Gestão de Entregadores" icon="rocket">
-		Cadastre motoboys, monitore as entregas e gerencie os repasses financeiros.
-	</Card>
-	<Card title="Integrações" icon="puzzle">
-		Conecte o Velo Delivery ao iFood e receba tudo em uma única tela.
-	</Card>
+  <LinkCard 
+    title="Gestão de Loja" 
+    description="Aprenda a configurar horários, áreas de entrega, taxas e o WhatsApp do seu delivery." 
+    href="/2-gestao-de-loja/horarios-de-funcionamento/" 
+  />
+  <LinkCard 
+    title="Catálogo e Estoque" 
+    description="Como cadastrar produtos, adicionar fotos, criar categorias e controlar estoque crítico." 
+    href="/3-catalogo-e-estoque/como-cadastrar-produtos/" 
+  />
+  <LinkCard 
+    title="Gestão de Pedidos (PDV)" 
+    description="Entenda o painel sonoro em tempo real, lançamento de pedidos manuais e impressão térmica." 
+    href="/4-pedidos-e-pdv/gestao-em-tempo-real/" 
+  />
+  <LinkCard 
+    title="Marketing e Vendas" 
+    description="Gere cupons de desconto, adicione banners promocionais e veja o ranking de clientes VIP." 
+    href="/5-marketing-e-clientes/como-criar-cupons/" 
+  />
 </CardGrid>
