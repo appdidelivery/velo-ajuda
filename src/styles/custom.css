@@ -1,0 +1,22 @@
+/* docs/src/styles/custom.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+
+:root {
+  /* Altera a fonte padrão para a mesma da Velo */
+  --sl-font: 'Inter', sans-serif;
+  
+  /* Cores no Tema Escuro (Padrão) */
+  --sl-color-accent-low: #4a2500;
+  --sl-color-accent: #FF7F00; /* Laranja Velo */
+  --sl-color-accent-high: #ffcc99;
+  --sl-color-white: #ffffff;
+  --sl-color-bg-nav: #0A1D3A; /* Azul Escuro Velo no menu topo */
+}
+
+:root[data-theme='light'] {
+  /* Cores no Tema Claro */
+  --sl-color-accent-low: #ffcc99;
+  --sl-color-accent: #FF7F00; /* Laranja Velo */
+  --sl-color-accent-high: #4a2500;
+  --sl-color-bg-nav: #0A1D3A; /* Mantém o topo azul escuro */
+}

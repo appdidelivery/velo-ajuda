@@ -1,40 +1,36 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Central de Ajuda - Velo Delivery
+description: Manuais, guias e documentação completa para gerenciar o seu delivery.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Bem-vindo à documentação oficial! Como podemos ajudar o seu negócio hoje?
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Primeiros Passos
+      link: /1-introducao/primeiros-passos/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+      variant: primary
+    - text: Acessar o Painel Velo
+      link: https://app.velodelivery.com.br/login # <-- Link corrigido aqui!
       icon: external
-      variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Guias Rápidos
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Gestão de Loja" icon="setting">
+		Aprenda a configurar horários, áreas de entrega, taxas e cardápio.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Lançamento de Pedidos" icon="add-document">
+		Como lançar pedidos manuais (telefone/WhatsApp) e gerenciar o status no PDV.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Gestão de Entregadores" icon="rocket">
+		Cadastre motoboys, monitore as entregas e gerencie os repasses financeiros.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Integrações" icon="puzzle">
+		Conecte o Velo Delivery ao iFood e receba tudo em uma única tela.
 	</Card>
 </CardGrid>
