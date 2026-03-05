@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://ajuda.velodelivery.com.br',
+  site: 'https://ajuda.velodelivery.com.br', // URL base da documentação
+  integrations: [sitemap()],
 
   integrations:[
     starlight({
