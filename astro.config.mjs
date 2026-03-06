@@ -32,6 +32,7 @@ export default defineConfig({
         { label: 'Catálogo e Estoque', autogenerate: { directory: '3-catalogo-e-estoque' } },
         { label: 'Pedidos e PDV', autogenerate: { directory: '4-pedidos-e-pdv' } },
         { label: 'Marketing e Clientes', autogenerate: { directory: '5-marketing-e-clientes' } },
+        { label: 'Financeiro e Integrações', autogenerate: { directory: '6-financeiro-e-integracoes' } }, // <-- ADICIONE ESTA LINHA
       ],
       
       // Mantém o CSS das cores da Velo
