@@ -1,15 +1,41 @@
 ---
-title: "Lançamento de Pedido Manual (PDV)"
-description: "Como vender para clientes que pedem diretamente pelo seu WhatsApp ou Balcão."
+title: PDV e Lançamento Manual (Frente de Caixa)
+description: Como usar o PDV do Veloapp para lançar pedidos no balcão, mesas ou telefone, incluindo abertura de caixa e cálculo de frete automático via mapa.
 ---
 
-## Quando usar o Lançamento Manual?
-Use esta funcionalidade sempre que receber um pedido por fora da loja online. Isso garante que seu **Estoque** seja baixado corretamente e seu **Financeiro** reflita o faturamento real.
+A aba **Lançar Pedido** funciona como uma **Frente de Caixa (PDV)** ultrarrápida. Ela foi desenhada para você não perder tempo quando um cliente faz o pedido presencialmente, por telefone ou WhatsApp.
 
-## Passo a Passo do Lançamento
-1. Acesse o menu **Lançar Pedido**.
-2. **Identificação:** Digite o Nome e o WhatsApp do cliente.
-3. **Endereço Inteligente:** Digite o **CEP** do cliente. O sistema buscará a Rua e o Bairro automaticamente e já calculará a taxa de entrega baseada nas suas regras.
-4. **Carrinho:** Selecione os produtos na lista à direita. Se o item tiver adicionais, o sistema abrirá as opções de escolha.
-5. **Pagamento:** Escolha entre Pix, Cartão ou Dinheiro.
-6. **Finalizar:** Clique em **Confirmar Pedido**. O pedido aparecerá instantaneamente na sua lista geral.
+## 1. Controle de Caixa (Auditoria)
+
+Antes de começar a lançar pedidos, é fundamental registrar a abertura do caixa para controle financeiro e auditoria de funcionários.
+
+* No topo da tela, clique no botão verde **"Abrir Meu Caixa"**.
+* O sistema registrará seu usuário, e-mail e o horário exato da abertura (visível apenas para o Dono na aba Equipe).
+* Ao fim do expediente, basta clicar em **"Fechar Meu Caixa"**.
+
+## 2. Buscando e Adicionando Produtos
+
+A interface do PDV foi otimizada para toques rápidos (ideal para tablets e monitores touch):
+1. Use a **Barra de Busca** ou clique nas **Tags de Categoria** para filtrar os produtos rapidamente.
+2. Clique no **Card do Produto** para adicioná-lo à comanda (lateral direita).
+3. Na comanda, você pode alterar a quantidade usando os botões de **[ + ]** e **[ - ]** ou excluir o item na lixeira.
+4. *Nota:* Se o produto estiver com estoque zerado, o card ficará cinza e não poderá ser adicionado.
+
+## 3. Informações do Cliente e Entrega
+
+A comanda se adapta dependendo de como o pedido será entregue:
+
+* **🏪 Balcão / Mesa:** Pede apenas o nome do cliente e opcionalmente o número da mesa/comanda. Não há cálculo de frete.
+* **🛵 Delivery:** Exige o preenchimento do endereço. 
+  * **Cálculo Inteligente de Frete:** Se você configurou as "Zonas de Entrega (Mapa)" na aba Configurações, ao digitar o CEP e buscar o endereço, o sistema **calculará a distância em linha reta** e aplicará o valor do frete automaticamente com base no raio da sua loja!
+
+## 4. Pagamento e Status Inteligente
+
+Para agilizar a produção, defina o método de pagamento no momento do lançamento:
+* Selecione **PIX**, **Cartão** ou **Dinheiro**.
+* Se escolher Dinheiro, abrirá um campo **"Troco para R$"**. O sistema calculará instantaneamente se o valor inserido cobre o pedido e mostrará o valor exato a devolver para o cliente.
+
+### Envio Direto para a Cozinha
+O status inicial do pedido se adapta ao nicho da sua loja (configurado na aba Configurações):
+* Lojas de **Alimentação** (Hambúrguer, Pizza): O pedido já cai como `👨‍🍳 Em Preparo` para a cozinha iniciar imediatamente.
+* Lojas de **Conveniência/Adega**: O pedido cai como `✅ Entregar na Hora`.

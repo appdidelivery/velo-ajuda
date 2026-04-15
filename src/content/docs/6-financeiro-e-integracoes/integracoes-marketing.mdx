@@ -1,21 +1,39 @@
 ---
-title: "Integrações Avançadas de Marketing"
-description: "Conecte sua loja ao Facebook Ads, Google Analytics, Tag Manager e WhatsApp API Oficial."
+title: Integrações e WhatsApp API
+description: Como conectar sua loja ao Meta Ads, Google Analytics e habilitar os disparos automáticos do robô via WhatsApp Cloud API.
 ---
 
-O Velo Delivery é uma plataforma focada em performance (Growth). Por isso, oferecemos um Hub de Integrações nativo para você conectar as maiores ferramentas de marketing do mercado e rastrear 100% do comportamento dos seus clientes.
+A aba **Integrações & API** permite conectar sua loja a ferramentas de inteligência de tráfego e ativar o motor de mensagens automatizadas.
 
-## Como Conectar
+## 1. WhatsApp Cloud API (Robô Automático)
 
-Acesse o menu **Integrações** no seu painel. Você verá "cards" para cada ferramenta disponível. Para ativar qualquer uma delas, basta clicar em **+ Conectar API** e colar o seu código de rastreio (ID).
+A integração mais importante do seu painel. Com ela ativa, o Veloapp dispara mensagens para seus clientes sem que você precise clicar em nada.
 
-### Ferramentas Suportadas:
+### Como Conectar (Passo a Passo)
+Você precisa de uma conta de desenvolvedor na Meta (Facebook). O processo exige atenção:
+1. Acesse o **Facebook Developers** e crie um App do tipo *Empresa (Business)*.
+2. Adicione o produto **WhatsApp** ao seu App.
+3. Copie o **ID do Número de Telefone** fornecido pela Meta.
+4. No Gerenciador de Negócios (Meta Business Suite), crie um **Usuário do Sistema** e gere um **Token Permanente** garantindo que a permissão `whatsapp_business_messaging` esteja marcada.
+5. Cole o ID e o Token no painel do Veloapp e clique em Salvar. O sistema fará um teste de conexão; se der tudo certo, o painel de Automações será liberado.
 
-* **Meta Ads (Facebook e Instagram):** Insira o ID do seu Pixel e o Token CAPI para rastrear os eventos de *AddToCart* (Adição ao Carrinho), *InitiateCheckout* e *Purchase* (Compra Finalizada).
-* **Google Analytics 4 (GA4):** Insira sua tag "G-XXXX" para mapear de onde estão vindo os acessos, cidades com mais vendas e dispositivos utilizados.
-* **Google Ads:** Cole seu ID e Label de conversão para avisar o Google Ads sempre que uma venda for concluída via tráfego pago.
-* **Google Tag Manager (GTM):** Liberdade total para instalar ferramentas de mapas de calor, pop-ups de terceiros ou chats.
-* **Google Merchant Center:** Ative para gerar automaticamente a URL do seu catálogo XML para as campanhas de Google Shopping.
-* **WhatsApp API:** Campo reservado para conexão oficial com servidores da Meta para disparos transacionais.
+### Gatilhos e Automações Disponíveis
+Com a API conectada e verde (✅ Ativo), você pode habilitar:
+* **Alerta de Novo Pedido:** Seu próprio WhatsApp apita quando um cliente compra.
+* **Status do Pedido:** O cliente recebe uma mensagem automática quando o pedido vai para "Em Preparo", "Saiu para Entrega" ou é "Cancelado".
+* **Carrinho Abandonado:** Se o cliente colocar itens no carrinho, informar o telefone e não pagar, o robô chama ele 1 hora depois oferecendo ajuda.
+* **Mensagem de Ausência:** Defina um texto padrão. Se o cliente tentar pedir fora do horário de funcionamento ou no Modo Férias, o robô responde avisando que a loja está fechada.
+* **NPS e Clube VIP:** Dispara pedido de avaliação horas após a entrega e avisa sobre pontos ganhos na carteira.
 
-**Dica:** Em cada card de integração, deixamos um botão de "Ajuda" (👉) que te leva direto para a página oficial da plataforma para você descobrir onde achar o seu ID.
+### Menu do Chatbot
+Ative o **Menu Automático** para que o robô envie uma saudação com até 2 botões interativos (Ex: "Ver Cardápio" e "Falar com Humano"). Se o cliente clicar em Falar com Humano, o bot entra em pausa temporária para você assumir o atendimento.
+
+---
+
+## 2. Integrações de Tráfego e Rastreamento
+
+Para quem investe em anúncios, configurar os Pixels é essencial para otimizar campanhas e traquear vendas.
+
+* **Meta Ads (Pixel):** Adicione seu Dataset ID. Com o CAPI (API de Conversões) habilitado, o sistema envia eventos de *Page View*, *Add to Cart* e *Purchase* direto para o servidor do Facebook, driblando bloqueios do iOS 14.
+* **Google Analytics 4 (GA4):** Insira seu Measurement ID (G-XXXXXX) para ter acesso ao funil de vendas, tempo de permanência e origem de tráfego no painel do Google.
+* **Google Ads:** Cole seu ID de Conversão e a Label para que o Google Ads saiba exatamente quanto cada campanha gerou em receita (R$) no checkout do Veloapp.
