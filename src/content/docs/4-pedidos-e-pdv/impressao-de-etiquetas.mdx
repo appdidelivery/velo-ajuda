@@ -1,17 +1,37 @@
 ---
-title: "Impressão de Etiquetas"
-description: "Como gerar as vias de conferência para a loja e para o entregador."
+title: Impressão de Etiquetas e Comandas
+description: Como imprimir vias de produção e entrega usando impressoras térmicas no Veloapp.
 ---
 
-## Padronização do Despacho
-A Velo Delivery facilita a expedição com um sistema de impressão térmica otimizado para bobinas de 80mm ou 58mm.
+O Veloapp possui um sistema de impressão térmica integrado, otimizado para o formato de "bobina" (80mm ou 58mm), gerando a comanda com um único clique, sem precisar de configurações complexas.
 
-## Como Imprimir
-1. No menu **Pedidos**, localize o pedido desejado.
-2. Clique no ícone da **Impressora (azul)**.
-3. Uma nova aba será aberta com duas vias formatadas:
-   - **Via da Loja:** Para conferência interna de itens e observações.
-   - **Via do Entregador:** Com endereço destacado, forma de pagamento e valor de troco.
+## 1. Como Imprimir um Pedido
 
-## Dica Pro
-O sistema de impressão funciona direto do navegador. Certifique-se de que os "Pop-ups" estão permitidos para o domínio da Velo no seu computador ou celular.
+1. Acesse a aba **Pedidos** (para acompanhar a fila) ou **Lançar Pedido** (PDV).
+2. Em qualquer card de pedido, clique no botão com o ícone de **Impressora 🖨️**.
+3. O sistema abrirá automaticamente uma nova aba formatada e acionará a caixa de diálogo de impressão do seu navegador.
+
+## 2. O que sai na Impressão?
+
+O sistema gera automaticamente **duas vias** para facilitar a operação logística da sua loja:
+
+### Via da Loja (Cozinha/Preparo)
+Fica na parte superior do ticket. Contém:
+* Nome da Loja, Data e Hora exata.
+* **ID do Pedido** (Ex: #A1B2C).
+* Nome do Cliente e Mesa/Garçom (se for pedido local).
+* Método de Pagamento e Troco (se houver).
+* **Itens do Pedido:** Quantidade, Nome do produto e Preço.
+* **Observações:** Destacadas em uma caixa para a cozinha não errar (ex: "Sem cebola").
+* Linha pontilhada com o aviso `✂--- CORTE AQUI ---✂`.
+
+### Via do Entregador (Motoboy)
+Fica na parte inferior do ticket. Contém o resumo do pedido e os dados cruciais para a logística:
+* Telefone do Cliente.
+* Endereço Completo para entrega.
+* Subtotal, Frete, Descontos aplicados e o **Total a Pagar** em destaque.
+
+## 3. Configurando a Impressora
+
+O Veloapp funciona com **qualquer impressora térmica não fiscal** instalada no seu computador (USB, Bluetooth ou Rede).
+* **Dica:** Na tela de impressão do Google Chrome, vá em "Mais Definições", desmarque a opção "Cabeçalhos e Rodapés" e ajuste as "Margens" para Mínimas. Isso economiza papel e deixa o ticket perfeito!
