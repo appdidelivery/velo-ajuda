@@ -1,39 +1,79 @@
 ---
-title: Integrações e WhatsApp API
-description: Como conectar sua loja ao Meta Ads, Google Analytics e habilitar os disparos automáticos do robô via WhatsApp Cloud API.
+title: "Integrações (Marketing, Rastreamento e WhatsApp)"
+description: "Aprenda a conectar o Pixel da Meta, ferramentas do Google (Analytics, Ads, Tag Manager, Meu Negócio) e a API Oficial do WhatsApp na sua loja Velo."
 ---
 
-A aba **Integrações & API** permite conectar sua loja a ferramentas de inteligência de tráfego e ativar o motor de mensagens automatizadas.
+Para potencializar as vendas e o atendimento da sua loja, a Velo Delivery oferece integrações nativas com as principais ferramentas de marketing e rastreamento do mercado, além da API Oficial do WhatsApp.
 
-## 1. WhatsApp Cloud API (Robô Automático)
+Para acessar e configurar qualquer uma destas ferramentas, acesse o menu lateral **Integrações** no seu painel.
 
-A integração mais importante do seu painel. Com ela ativa, o Veloapp dispara mensagens para seus clientes sem que você precise clicar em nada.
-
-### Como Conectar (Passo a Passo)
-Você precisa de uma conta de desenvolvedor na Meta (Facebook). O processo exige atenção:
-1. Acesse o **Facebook Developers** e crie um App do tipo *Empresa (Business)*.
-2. Adicione o produto **WhatsApp** ao seu App.
-3. Copie o **ID do Número de Telefone** fornecido pela Meta.
-4. No Gerenciador de Negócios (Meta Business Suite), crie um **Usuário do Sistema** e gere um **Token Permanente** garantindo que a permissão `whatsapp_business_messaging` esteja marcada.
-5. Cole o ID e o Token no painel do Veloapp e clique em Salvar. O sistema fará um teste de conexão; se der tudo certo, o painel de Automações será liberado.
-
-### Gatilhos e Automações Disponíveis
-Com a API conectada e verde (✅ Ativo), você pode habilitar:
-* **Alerta de Novo Pedido:** Seu próprio WhatsApp apita quando um cliente compra.
-* **Status do Pedido:** O cliente recebe uma mensagem automática quando o pedido vai para "Em Preparo", "Saiu para Entrega" ou é "Cancelado".
-* **Carrinho Abandonado:** Se o cliente colocar itens no carrinho, informar o telefone e não pagar, o robô chama ele 1 hora depois oferecendo ajuda.
-* **Mensagem de Ausência:** Defina um texto padrão. Se o cliente tentar pedir fora do horário de funcionamento ou no Modo Férias, o robô responde avisando que a loja está fechada.
-* **NPS e Clube VIP:** Dispara pedido de avaliação horas após a entrega e avisa sobre pontos ganhos na carteira.
-
-### Menu do Chatbot
-Ative o **Menu Automático** para que o robô envie uma saudação com até 2 botões interativos (Ex: "Ver Cardápio" e "Falar com Humano"). Se o cliente clicar em Falar com Humano, o bot entra em pausa temporária para você assumir o atendimento.
+Abaixo, detalhamos como preencher os dados de cada uma delas:
 
 ---
 
-## 2. Integrações de Tráfego e Rastreamento
+## 🔵 Meta Ads (Facebook e Instagram)
+Essencial para rastrear eventos de quem visita sua loja e otimizar suas campanhas de anúncios na Meta. A Velo possui integração via Pixel e via API de Conversões (CAPI) para maior precisão.
 
-Para quem investe em anúncios, configurar os Pixels é essencial para otimizar campanhas e traquear vendas.
+1. No card do **Meta Ads**, clique em **+ Conectar API**.
+2. **ID do Pixel (Dataset ID):** Cole a numeração correspondente ao seu Pixel (apenas números).
+3. **Token da API de Conversões (Opcional):** Para um rastreamento mais seguro e à prova de bloqueadores de anúncios, gere o Token de Acesso no Gerenciador de Eventos da Meta e cole neste campo.
+4. Clique em **Salvar e Ativar**.
 
-* **Meta Ads (Pixel):** Adicione seu Dataset ID. Com o CAPI (API de Conversões) habilitado, o sistema envia eventos de *Page View*, *Add to Cart* e *Purchase* direto para o servidor do Facebook, driblando bloqueios do iOS 14.
-* **Google Analytics 4 (GA4):** Insira seu Measurement ID (G-XXXXXX) para ter acesso ao funil de vendas, tempo de permanência e origem de tráfego no painel do Google.
-* **Google Ads:** Cole seu ID de Conversão e a Label para que o Google Ads saiba exatamente quanto cada campanha gerou em receita (R$) no checkout do Veloapp.
+---
+
+## 🟠 Google Analytics 4 (GA4)
+Acompanhe métricas avançadas de tráfego, comportamento do usuário e funil de vendas da sua loja.
+
+1. No card do **Google Analytics 4**, clique em **+ Conectar API**.
+2. **Measurement ID:** Cole o ID de métrica da sua propriedade web do GA4. O formato padrão começa com a letra G (Exemplo: `G-XXXXXXX`).
+3. Clique em **Salvar e Ativar**.
+
+---
+
+## 🔵 Google Ads
+Meça o retorno das suas campanhas de pesquisa, display e YouTube enviando os eventos de conversão diretamente para o Google Ads.
+
+1. No card do **Google Ads**, clique em **+ Conectar API**.
+2. **ID de Conversão:** Cole o identificador da sua conta do Ads. O formato padrão começa com AW (Exemplo: `AW-XXXXXXX`).
+3. **Rótulo de Conversão (Label):** Cole o código alfanumérico específico da ação de conversão (compra) que você criou no Google Ads.
+4. Clique em **Salvar e Ativar**.
+
+---
+
+## 🩵 Google Tag Manager (GTM)
+Para usuários avançados que desejam gerenciar scripts e tags personalizadas (como TikTok Pixel, Pinterest, etc.) em um só lugar.
+
+1. No card do **Google Tag Manager**, clique em **+ Conectar API**.
+2. **ID do Container:** Cole o identificador do seu container. O formato padrão começa com GTM (Exemplo: `GTM-XXXXXXX`).
+3. Clique em **Salvar e Ativar**.
+
+---
+
+## 🏪 Google Meu Negócio
+Conecte sua ficha do Google para sincronizar avaliações dos clientes e postar ofertas diretamente do seu painel Velo.
+
+1. No card do **Google Meu Negócio**, clique em **+ Conectar API**.
+2. **ID do Local (Google Location ID):** Insira o ID exclusivo do seu estabelecimento no Google Maps.
+3. **Autenticação Segura:** Clique no botão azul **Fazer Login com o Google** e escolha a conta Gmail que administra a ficha da sua empresa. O Google gerará um token automaticamente.
+4. Clique em **Salvar e Ativar**.
+
+---
+
+## 🟢 WhatsApp API (Oficial Cloud)
+Automatize o atendimento e envie disparos pelo WhatsApp utilizando a API Oficial da Meta (sem risco de banimentos do aparelho celular). 
+
+*Atenção: Esta é uma integração avançada voltada para desenvolvedores ou usuários com familiaridade no painel da Meta.*
+
+### Passo a passo para conexão:
+
+1. No card do **WhatsApp API**, clique em **+ Conectar API**. Você precisará buscar duas informações no portal da Meta:
+2. **Criar o App:** Acesse o [Facebook Developers](https://developers.facebook.com/) e crie um aplicativo do tipo **Empresa (Business)**.
+3. **Ativar o WhatsApp:** Dentro do seu novo app na Meta, encontre o card **WhatsApp** e clique em **Configurar**.
+4. **Pegar o ID do Número:** Vá no menu lateral em *WhatsApp > Configuração da API* e copie o **ID do número de telefone**. Cole no primeiro campo do painel da Velo.
+5. **Gerar Token Permanente:** Esta etapa é crítica.
+   * Acesse o seu **Gerenciador de Negócios (Usuários do Sistema)**.
+   * Crie um **Usuário do Sistema**.
+   * Adicione o App criado anteriormente como ativo.
+   * Gere um novo token marcando obrigatoriamente a permissão `whatsapp_business_messaging`.
+   * Copie este token extenso e cole no segundo campo do painel da Velo (**Token de Acesso Permanente**).
+6. Com o ID e o Token preenchidos, clique em **Salvar e Ativar** para validar suas credenciais e liberar o chatbot.
