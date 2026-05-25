@@ -15,53 +15,17 @@ Olá! Aqui você encontra guias práticos e rápidos para configurar sua loja, g
 
 ---
 
-{/* BANNER DE CAPTURA (TESTE GRÁTIS) NATIVO */}
+{/* BANNER DE CAPTURA - TESTE GRÁTIS COM BOTÃO DIRETO */}
 <div style={{ background: 'linear-gradient(135deg, #1e3a8a, #3b82f6)', padding: '40px 20px', borderRadius: '24px', color: 'white', textAlign: 'center', marginBottom: '40px', boxShadow: '0 10px 25px -5px rgba(59, 130, 246, 0.5)' }}>
   <h2 style={{ color: 'white', marginTop: '0', fontSize: '28px', fontWeight: '900', lineHeight: '1.2' }}>🚀 Teste a Velo Delivery Grátis por 30 Dias!</h2>
   <p style={{ fontSize: '16px', opacity: 0.9, marginBottom: '30px', fontWeight: '500' }}>
     Crie sua loja, receba pedidos no WhatsApp e não pague nada no primeiro mês.
   </p>
   
-  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', maxWidth: '400px', margin: '0 auto' }}>
-    
-    <input id="lead_nome" type="text" placeholder="Seu Nome Completo" required style={{ padding: '16px', borderRadius: '12px', border: 'none', width: '100%', color: '#1e293b', fontSize: '14px', outline: 'none', boxSizing: 'border-box', fontWeight: 'bold' }} />
-    
-    <input id="lead_loja" type="text" placeholder="Nome do seu Delivery" required style={{ padding: '16px', borderRadius: '12px', border: 'none', width: '100%', color: '#1e293b', fontSize: '14px', outline: 'none', boxSizing: 'border-box', fontWeight: 'bold' }} />
-    
-    <input id="lead_wpp" type="tel" placeholder="Seu WhatsApp (Ex: 11999999999)" required style={{ padding: '16px', borderRadius: '12px', border: 'none', width: '100%', color: '#1e293b', fontSize: '14px', outline: 'none', boxSizing: 'border-box', fontWeight: 'bold' }} />
-    
-    <button id="btn_submit_lead" style={{ backgroundColor: '#10b981', color: 'white', padding: '18px', border: 'none', borderRadius: '12px', fontWeight: 900, cursor: 'pointer', fontSize: '16px', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '10px', boxShadow: '0 4px 6px -1px rgba(16, 185, 129, 0.4)', width: '100%', boxSizing: 'border-box', transition: 'all 0.2s' }}>
-      Garantir Meus 30 Dias Grátis
-    </button>
-
-  </div>
+  <a href="https://wa.me/554832200260?text=Ol%C3%A1%21%20Gostaria%20de%20iniciar%20meu%20Teste%20Gr%C3%A1tis%20de%2030%20dias%20na%20Velo%20Delivery." target="_blank" style={{ backgroundColor: '#10b981', color: 'white', padding: '16px 32px', border: 'none', borderRadius: '12px', fontWeight: 900, cursor: 'pointer', fontSize: '16px', textTransform: 'uppercase', letterSpacing: '1px', display: 'inline-block', textDecoration: 'none', boxShadow: '0 4px 6px -1px rgba(16, 185, 129, 0.4)' }}>
+    Garantir Meus 30 Dias Grátis
+  </a>
 </div>
-
-{/* SCRIPT QUE LÊ OS DADOS E MANDA PRO SEU ZAP */}
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('btn_submit_lead');
-    if (btn) {
-      btn.addEventListener('click', () => {
-        const n = document.getElementById('lead_nome').value;
-        const l = document.getElementById('lead_loja').value;
-        const w = document.getElementById('lead_wpp').value;
-        
-        if (!n || !l || !w) {
-          alert('Por favor, preencha todos os campos para iniciar o teste grátis!');
-          return;
-        }
-        
-        btn.innerHTML = 'Redirecionando...';
-        
-        const msg = 'Olá! Gostaria de iniciar meu Teste Grátis de 30 dias na Velo Delivery.%0A%0A*Nome:* ' + n + '%0A*Loja:* ' + l + '%0A*WhatsApp:* ' + w;
-        window.open('https://wa.me/554832200260?text=' + msg, '_blank');
-        
-        setTimeout(() => { btn.innerHTML = 'Garantir Meus 30 Dias Grátis'; }, 2000);
-      });
-    }
-  });
-</script>
 
 ---
 
