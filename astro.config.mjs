@@ -1,13 +1,20 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import starlight from '@astrojs/starlight'; // <-- ESSA LINHA É A CHAVE
+import starlight from '@astrojs/starlight';
+import sanity from '@sanity/astro';
 
 export default defineConfig({
   site: 'https://ajuda.velodelivery.com.br',
   
   // Colocamos as duas integrações juntas em uma única lista []
   integrations: [
-    sitemap(), 
+    sanity({
+      projectId: 'g3u1ljl9',
+      dataset: 'velodeliveryblog',
+      useCdn: false,
+      apiVersion: '2026-07-01',
+    }),
+    sitemap(),
     starlight({
       title: 'Velo Delivery',
       
